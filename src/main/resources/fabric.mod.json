@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "press_g_to_meow",
+  "version": "${version}",
+  "name": "Press G to meow",
+  "description": "A port of Meowing form Webfishing!",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/press_g_to_meow/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "rings_of_saturn.github.io.press_g_to_meow.client.PressGToMeowClient"
+    ],
+    "main": [
+      "rings_of_saturn.github.io.press_g_to_meow.PressGToMeow"
+    ]
+  },
+  "mixins": [
+    "press_g_to_meow.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
