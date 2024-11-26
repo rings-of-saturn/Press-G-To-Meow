@@ -14,17 +14,21 @@ public class KeyInputHandler {
 
 	public static final String MEOW = "key.press_g_to_meow.meow";
 
-
 	public static KeyBinding meowKey;
+
+	public static final String BARK = "key.press_g_to_meow.bark";
+
+	public static KeyBinding barkKey;
 
 	public static void registerKeyInputs(){
 		ClientTickEvents.END_CLIENT_TICK.register(client -> {
-			if(client.player != null) {
+			if(client.player != null && client.player.getWorld() != null) {
 				if (meowKey.wasPressed()) {
-                    if (client.world != null) {
-                        client.player.getWorld().playSound(client.player, client.player.getBlockPos(), SoundEvents.ENTITY_CAT_AMBIENT, SoundCategory.PLAYERS,1f, (float) client.world.getRandom().nextBetween(0, 10) /10);
-                    }
+					client.player.getWorld().playSound(client.player, client.player.getBlockPos(), SoundEvents.ENTITY_CAT_AMBIENT, SoundCategory.PLAYERS,1f, (float) client.player.getWorld().getRandom().nextBetween(0, 10) /10);
                 }
+				if (barkKey.wasPressed()) {
+					client.player.getWorld().playSound(client.player, client.player.getBlockPos(), SoundEvents.ENTITY_WOLF_AMBIENT, SoundCategory.PLAYERS,1f, (float) client.player.getWorld().getRandom().nextBetween(0, 10) /10);
+				}
 			}
 		});
 	}
@@ -34,6 +38,13 @@ public class KeyInputHandler {
 			MEOW,
 			InputUtil.Type.KEYSYM,
 			GLFW.GLFW_KEY_G,
+			KEY_CATEGORY_MEOWING
+		));
+
+		barkKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+			BARK,
+			InputUtil.Type.KEYSYM,
+			GLFW.GLFW_KEY_H,
 			KEY_CATEGORY_MEOWING
 		));
 
