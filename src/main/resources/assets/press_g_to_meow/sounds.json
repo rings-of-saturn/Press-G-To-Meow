@@ -1,0 +1,40 @@
+{
+  "bark": {
+    "subtitle": "Player barks",
+    "sounds": [
+      {
+        "name": "press_g_to_meow:bark/bark1",
+        "stream": true
+      },
+      {
+        "name": "press_g_to_meow:bark/bark2",
+        "stream": true
+      },
+      {
+        "name": "press_g_to_meow:bark/bark3",
+        "stream": true
+      }
+    ]
+  },
+  "meow": {
+    "subtitle": "Player meows",
+    "sounds": [
+      {
+        "name": "press_g_to_meow:meow/meow1",
+        "stream": true
+      },
+      {
+        "name": "press_g_to_meow:meow/meow2",
+        "stream": true
+      },
+      {
+        "name": "press_g_to_meow:meow/meow3",
+        "stream": true
+      },
+      {
+        "name": "press_g_to_meow:meow/meow4",
+        "stream": true
+      }
+    ]
+  }
+}

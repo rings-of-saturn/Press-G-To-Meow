@@ -2,5 +2,11 @@
   "key.press_g_to_meow.meow": "Meow!",
   "key.press_g_to_meow.bark": "Bark!",
 
-  "key.category.press_g_to_meow.press_g_to_meow": "Press G To Meow"
+  "key.category.press_g_to_meow.press_g_to_meow": "Press G To Meow",
+
+
+  "text.config.pgtm_config.title": "Press G To Meow",
+
+  "text.config.pgtm_config.option.pitchMax": "Maximum Pitch",
+  "text.config.pgtm_config.option.pitchMin": "Minimum Pitch"
 }

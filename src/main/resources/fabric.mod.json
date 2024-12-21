@@ -4,11 +4,13 @@
   "version": "${version}",
   "name": "Press G to meow",
   "description": "A port of Meowing from Webfishing!",
-  "authors": [],
+  "authors": [
+    "Saturn's Rings"
+  ],
   "contact": {},
   "license": "MIT",
   "icon": "assets/press_g_to_meow/icon.png",
-  "environment": "client",
+  "environment": "*",
   "entrypoints": {
     "client": [
       "rings_of_saturn.github.io.press_g_to_meow.client.PressGToMeowClient"
